@@ -1,0 +1,6 @@
+1.Download the quazyilx file and name it as 'quazyilx0.txt':
+wget s3.amazonaws.com/bigdatateaching/quazyilx/quazyilx0.txt
+2.Use 'grep' command to find the lines where the quazyilx failed:
+grep fnard:-1 fnok:-1 cark:-1 gnuck:-1 quazyilx0.txt
+3.Take the output and redirect it to a file called 'quazyilx-failures.txt' by using '>'redirect operator.
+grep fnard:-1 fnok:-1 cark:-1 gnuck:-1 quazyilx0.txt > quazyilx-failures.txt
