@@ -1,6 +1,2 @@
-1.Download the quazyilx file and name it as 'quazyilx0.txt':
-wget s3.amazonaws.com/bigdatateaching/quazyilx/quazyilx0.txt
-2.Use 'grep' command to find the lines where the quazyilx failed:
-grep fnard:-1 fnok:-1 cark:-1 gnuck:-1 quazyilx0.txt
-3.Take the output and redirect it to a file called 'quazyilx-failures.txt' by using '>'redirect operator.
-grep fnard:-1 fnok:-1 cark:-1 gnuck:-1 quazyilx0.txt > quazyilx-failures.txt
+hadoop jar /usr/lib/hadoop/hadoop-streaming.jar -D mapreduce.job.reduces=0 -D stream.non.zero.exit.is.failure=false -input s3://bigdatateaching/quazyilx/quazyilx2.txt -output quazyilx-failures -mapper /bin/grep "fnard:-1 fnok:-1 cark:-1 gnuck:-1"
+hadoop fs -cat hdfs://ip-172-31-26-239.ec2.internal:8020/user/hadoop/quazyilx-failures.txt/part* | sort >quazyilx-failures.txt
