@@ -5,4 +5,4 @@ hadoop jar /usr/lib/hadoop/hadoop-streaming.jar \
 -output quazyilx-failures \
 -mapper /bin/grep "fnard:-1 fnok:-1 cark:-1 gnuck:-1"
 
-hadoop fs -cat hdfs://ip-172-31-26-239.ec2.internal:8020/user/hadoop/quazyilx-failures.txt/part* | sort >quazyilx-failures.txt
+hadoop fs -cat hdfs://ip-172-31-26-239.ec2.internal:8020/user/hadoop/quazyilx-failures/part* | sort >quazyilx-failures.txt
