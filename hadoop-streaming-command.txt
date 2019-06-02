@@ -1,3 +1,2 @@
-hadoop jar /usr/lib/hadoop/hadoop-streaming.jar
--D mapreduce.job.reduces=0 'n\'
--D mapreduce.job.reduces=0 -D mapreduce.job.reduces=0 
+hadoop-streaming-command.txt \
+hadoop-streaming-command.txt
